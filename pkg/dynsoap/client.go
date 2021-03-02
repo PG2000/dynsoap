@@ -7,8 +7,8 @@ import (
 )
 
 // Returns a Dynect Client with a configured http.Client
-// The default settings for the http.client has a timeout of
-// 10 seconds and reads proxy variables from environment http.ProxyFromEnvironment
+// The default settings for the http.client are a timeout of
+// 10 seconds and reading proxy variables from http.ProxyFromEnvironment
 func NewDynectClient(url string) Dynect {
 	client := &http.Client{
 		Timeout: time.Second * 10,
